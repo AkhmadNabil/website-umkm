@@ -26,6 +26,11 @@ body {
 
 .products {
   padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+.product-card {
+  margin-bottom: 20px;
 }
 
 button {
