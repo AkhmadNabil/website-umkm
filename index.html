@@ -3,82 +3,90 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kopi Kapal Api - UMKM Pekalongan</title>
+    <title>Kopi Kuripan - UMKM Pekalongan</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="#kontak">Kontak Singkat</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>Kopi Kapal Api</h1>
-        <p>
-          Menyajikan kopi rempah khas Pekalongan dan racikan kopi susu
-          kekinian untuk menemani tugas kuliahmu.
-        </p>
-        <button id="promoButton" type="button">
-          Lihat promo hari ini
-        </button>
-        <h2>Lokasi</h2>
-        <p>Kuripan Lor, Kecamatan Pekalongan Selatan, Kota Pekalongan</p>
-        <h3>Jam Operasional</h3>
-        <p>08.00 - 22.00 WIB</p>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Kopi Kuripan</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten" class="page">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">UMKM Pekalongan</p>
+          <h1 id="hero-title">Kopi Kuripan</h1>
+          <p>
+            Menyajikan kopi rempah khas Pekalongan dan racikan kopi susu
+            kekinian untuk menemani tugas kuliahmu.
+          </p>
+          <button id="promoButton" type="button">
+              Cek Promo Hari Ini !!!
+          </button>
+        </div>
+        <img src="assets/images/cafe-kuripan.jpg" alt="Kedai Kopi Kuripan Pekalongan" />
       </section>
+
       <section aria-labelledby="produk-title">
         <h2 id="produk-title">Produk Unggulan</h2>
 
-        <ul class="products">
-          <li class="product-card">
-            <h3>Kopi Susu</h3>
-            <p>
-              Minuman perpaduan espresso dan susu yang menghasilkan rasa
-              seimbang antara pahit kopi dan creamy susu, cocok dinikmati
-              kapan saja.
-            </p>
-            <p>Harga Rp20.000</p>
-          </li>
-          <li class="product-card">
-            <h3>Kopi ToraBika</h3>
-            <p>
-              Kopi instan populer dengan cita rasa khas yang nikmat, aroma
-              harum, dan perpaduan rasa kopi yang pas, cocok untuk menemani
-              aktivitas sehari-hari.
-            </p>
-            <p>Harga Rp15.000</p>
-          </li>
-          <li class="product-card">
-            <h3>Kopi Espresso</h3>
-            <p>
-              Kopi dengan rasa yang kuat, pekat, dan aroma khas, cocok bagi
-              pecinta kopi dengan cita rasa intens.
-            </p>
-            <p>Harga Rp25.000</p>
-          </li>
-        </ul>
+        <div class="product-list">
+          <article class="product-card">
+            <img src="assets/images/kopi-susu.jpeg" alt="Kopi Susu" />
+            <div class="product-content">
+              <h3>Kopi Susu</h3>
+              <p>
+                Minuman perpaduan espresso dan susu yang menghasilkan rasa
+                seimbang antara pahit kopi dan creamy susu, cocok dinikmati
+                kapan saja.
+              </p>
+              <p class="price">Rp20.000</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="assets/images/kopi-americano.jpeg" alt="Kopi ToraBika" />
+            <div class="product-content">
+              <h3>Kopi Americano</h3>
+              <p>
+                Sajian kopi hitam klasik dengan karakter rasa mantap, aroma pekat, dan tingkat kepahitan yang seimbang.
+              </p>
+              <p class="price">Rp15.000</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="assets/images/kopi-espresso.jpeg" alt="Kopi Espresso" />
+            <div class="product-content">
+              <h3>Kopi Espresso</h3>
+              <p>
+                Kopi dengan rasa yang kuat, pekat, dan aroma khas, cocok bagi
+                pecinta kopi dengan cita rasa intens.
+              </p>
+              <p class="price">Rp25.000</p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="kontak">
-        <h2>Kontak Singkat</h2>
-        <p>Alamat: Jl. Raya Pekalongan No. 123, Pekalongan</p>
-        <p>Jam Layanan: Senin - Minggu (08.00 - 22.00 WIB)</p>
-        <p>
-          Hubungi kami via 
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
-            WhatsApp Kopi Kapal Api
-          </a>
-        </p>
-      </section> 
+      <section aria-labelledby="lokasi-title">
+        <h2 id="lokasi-title">Lokasi & Operational</h2>
+        <p><strong>Alamat:</strong> Kuripan Lor, Kecamatan Pekalongan Selatan, Kota Pekalongan</p>
+        <p><strong>Jam Operasional:</strong> 08.00 - 22.00 WIB</p>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Kopi Kuripan. Data pada halaman ini bersifat dummy.</p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
