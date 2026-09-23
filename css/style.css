@@ -236,3 +236,35 @@ figcaption { margin-top: 8px; color: #6b5b52; }
 table { width: 100%; border-collapse: collapse; }
 caption { margin-bottom: 8px; font-weight: 700; text-align: left; }
 th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.media-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.media-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-card figcaption {
+  padding: 16px;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
