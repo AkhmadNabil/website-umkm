@@ -268,3 +268,134 @@ th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
   font-size: 0.9rem;
   line-height: 1.4;
 }
+
+#preview-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #dccbbc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: #2f2118;
+  margin-top: 10px;
+}
+
+#form-kontak fieldset {
+  border: 1px solid #dccbbc;
+  border-radius: 8px;
+  padding: 10px 14px 14px 14px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 600px;
+  margin-top: 12px;
+}
+
+#form-kontak legend {
+  font-weight: 700;
+  padding: 0 6px;
+  color: #2f2118;
+  background: transparent;
+}
+
+#form-kontak fieldset label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #2f2118;
+}
+
+#form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin-top: 16px;
+}
+
+#form-kontak .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#form-kontak .field label {
+  font-weight: 700;
+  color: #2f2118;
+}
+
+#form-kontak input[type="text"],
+#form-kontak input[type="email"],
+#form-kontak input[type="tel"],
+#form-kontak select,
+#form-kontak textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #dccbbc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #2f2118;
+  box-sizing: border-box;
+}
+
+#form-kontak fieldset {
+  border: 1px solid #dccbbc;
+  border-radius: 8px;
+  padding: 16px 14px 14px 14px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+#form-kontak legend {
+  font-weight: 700;
+  padding: 0 8px;
+  color: #2f2118;
+  margin-left: 4px;
+}
+
+#form-kontak fieldset label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #2f2118;
+}
+
+#form-kontak button[type="submit"] {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #f6c96b;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #2f2118;
+}
+
+#form-kontak button[type="submit"]:hover {
+  background-color: #e5b85a;
+}
+
+#preview-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #dccbbc;
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: #2f2118;
+  margin-top: 10px;
+  max-width: 600px;
+}
