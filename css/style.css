@@ -1,25 +1,60 @@
-body {
-  margin: 0;
-  color: #2f2118;
-  background: #f6f0e8;
-  font-family: Arial, sans-serif;
+:root {
+  --color-primary: #7b4b2a;
+  --color-primary-strong: #563b28;
+  --color-accent: #ffd166;
+  --color-text: #2f2118;
+  --color-muted: #555555;
+  --color-surface: #ffffff;
+  --color-background: #f6f0e8;
+  --color-border: #dccbbc;
+  --color-focus: #2563eb;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 20px;
+  --space-4: 32px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f6f0e8;
-  border-bottom: 1px solid #e0d8cd;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; height: auto; }
+figure { margin: 0 0 var(--space-4); }
+figcaption { margin-top: var(--space-1); color: #6b5b52; }
+
+.site-header {
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .brand {
-  font-weight: bold;
+  display: inline-block;
+  margin-bottom: var(--space-1);
+  color: #4b2715;
+  font-weight: 800;
   font-size: 1.2rem;
-  color: #2f2118;
+  text-decoration: none;
 }
 
+.nav ul,
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -28,31 +63,42 @@ body {
   padding: 0;
 }
 
-.nav-links a {
+.nav li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.nav-links a,
+.nav a {
   text-decoration: underline;
-  color: #2f2118;
+  color: var(--color-text);
   font-weight: bold;
 }
 
-.nav-links a:hover {
-  color: #6f3b1f;
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--color-primary-strong);
+}
+
+.nav a[aria-current="page"] {
+  font-weight: 800;
 }
 
 .page {
   max-width: 920px;
   margin: 0 auto;
-  padding: 32px 20px;
+  padding: var(--space-4) var(--space-3);
 }
 
 .hero {
   display: flex;
   align-items: center;           
   justify-content: space-between;
-  gap: 32px;                     
-  padding: 40px;
+  gap: var(--space-4);                     
+  padding: var(--space-4);
   color: white;
-  background: #7b4b2a;           
-  border-radius: 24px;
+  background: var(--color-primary);           
+  border-radius: var(--radius-lg);
 }
 
 .hero-content {
@@ -64,39 +110,45 @@ body {
   max-width: 400px;             
   height: 280px;                 
   object-fit: cover;            
-  border-radius: 16px;      
+  border-radius: var(--radius-md);      
 }
 
 .eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 var(--space-1);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.product-list {
+.product-list,
+.gallery-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;                             
-  margin-top: 20px;
+  gap: var(--space-2);                             
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
-.product-card {
-  background: #ffffff;                  
-  border-radius: 16px;                  
+.product-card,
+.media-card,
+.info-section {
+  background: var(--color-surface);                  
+  border-radius: var(--radius-md);                  
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;                     
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
-.product-card img {
+.product-card img,
+.media-card img {
   width: 100%;
   height: 180px;                         
   object-fit: cover;                   
 }
 
 .product-content {
-  padding: 20px;
+  padding: var(--space-3);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -108,9 +160,11 @@ body {
   font-size: 1.1rem;
 }
 
-.product-card p {
-  margin: 0 0 16px 0;
-  color: #555555;
+.product-card p,
+.media-card figcaption {
+  padding: var(--space-3);
+  margin: 0;
+  color: var(--color-muted);
   font-size: 0.9rem;
   line-height: 1.4;
   flex-grow: 1;
@@ -118,18 +172,24 @@ body {
 
 .price {
   font-weight: 800;
-  color: #2f2118;
+  color: var(--color-text);
   margin: 0 !important;
 }
 
-button {
+button,
+#form-kontak button[type="submit"] {
   padding: 12px 18px;
-  color: #2f2118;
+  color: var(--color-text);
   font-weight: 700;
   cursor: pointer;
-  background: #ffd166;
+  background: var(--color-accent);
   border: 0;
   border-radius: 999px;
+}
+
+button:hover,
+#form-kontak button[type="submit"]:hover {
+  background-color: #e5b85a;
 }
 
 .skip-link {
@@ -137,7 +197,7 @@ button {
   left: -9999px;
   padding: 8px 12px;
   color: white;
-  background: #2f2118;
+  background: var(--color-text);
 }
 
 .skip-link:focus {
@@ -145,51 +205,20 @@ button {
   left: 8px;
 }
 
-.site-header {
-  padding: 16px 20px;
-  background: white;
-  border-bottom: 1px solid #dccbbc;
-}
-
-.nav {
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.brand {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: #4b2715;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav li {
-  display: inline-block;
-  margin-right: 12px;
-}
-
-.nav a[aria-current="page"] {
-  font-weight: 800;
-}
-
 a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #2563eb;
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 
 .site-footer {
-  padding: 24px 20px;
+  padding: 24px var(--space-3);
   color: white;
   text-align: center;
-  background: #2f2118;
+  background: var(--color-text);
 }
 
 .about-hero,
@@ -205,8 +234,8 @@ button:focus-visible {
 .about-image-wrapper {
   max-width: 500px;             
   width: 100%;
-  margin: 0 auto 32px auto;   
-  border-radius: 16px;         
+  margin: 0 auto var(--space-4) auto;   
+  border-radius: var(--radius-md);         
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -219,103 +248,20 @@ button:focus-visible {
 }
 
 .info-section {
-  background: #ffffff;          
-  padding: 24px 28px;           
-  border-radius: 16px;          
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-  margin-top: 32px;            
+  padding: var(--space-3) 28px;           
+  margin-top: var(--space-4);            
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-img { max-width: 100%; height: auto; }
-figure { margin: 0 0 24px; }
-figcaption { margin-top: 8px; color: #6b5b52; }
 table { width: 100%; border-collapse: collapse; }
-caption { margin-bottom: 8px; font-weight: 700; text-align: left; }
-th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
-
-.gallery-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 32px;
-}
-
-.media-card {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.media-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.media-card figcaption {
-  padding: 16px;
-  color: #555555;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-#preview-form {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #dccbbc;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  white-space: pre-wrap;
-  font-family: inherit;
-  color: #2f2118;
-  margin-top: 10px;
-}
-
-#form-kontak fieldset {
-  border: 1px solid #dccbbc;
-  border-radius: 8px;
-  padding: 10px 14px 14px 14px;
-  background: #ffffff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
-  max-width: 600px;
-  margin-top: 12px;
-}
-
-#form-kontak legend {
-  font-weight: 700;
-  padding: 0 6px;
-  color: #2f2118;
-  background: transparent;
-}
-
-#form-kontak fieldset label {
-  font-weight: normal;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  color: #2f2118;
-}
+caption { margin-bottom: var(--space-1); font-weight: 700; text-align: left; }
+th, td { padding: 10px; text-align: left; border: 1px solid var(--color-border); }
 
 #form-kontak {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-2);
   max-width: 600px;
-  margin-top: 16px;
+  margin-top: var(--space-2);
 }
 
 #form-kontak .field {
@@ -326,7 +272,7 @@ th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 
 #form-kontak .field label {
   font-weight: 700;
-  color: #2f2118;
+  color: var(--color-text);
 }
 
 #form-kontak input[type="text"],
@@ -336,31 +282,30 @@ th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 #form-kontak textarea {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid #dccbbc;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 1rem;
-  background: #ffffff;
-  color: #2f2118;
-  box-sizing: border-box;
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 #form-kontak fieldset {
-  border: 1px solid #dccbbc;
-  border-radius: 8px;
-  padding: 16px 14px 14px 14px;
-  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) 14px 14px 14px;
+  background: var(--color-surface);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 8px;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 #form-kontak legend {
   font-weight: 700;
   padding: 0 8px;
-  color: #2f2118;
+  color: var(--color-text);
   margin-left: 4px;
 }
 
@@ -370,32 +315,18 @@ th, td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  color: #2f2118;
-}
-
-#form-kontak button[type="submit"] {
-  align-self: flex-start;
-  padding: 10px 20px;
-  background-color: #f6c96b;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  color: #2f2118;
-}
-
-#form-kontak button[type="submit"]:hover {
-  background-color: #e5b85a;
+  color: var(--color-text);
 }
 
 #preview-form {
-  background: #ffffff;
-  padding: 20px;
+  background: var(--color-surface);
+  padding: var(--space-3);
   border-radius: 12px;
-  border: 1px solid #dccbbc;
+  border: 1px solid var(--color-border);
   white-space: pre-wrap;
   font-family: inherit;
-  color: #2f2118;
+  color: var(--color-text);
   margin-top: 10px;
   max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
