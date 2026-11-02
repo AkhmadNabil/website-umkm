@@ -6,19 +6,36 @@
   <title>Kontak Kopi Kuripan - Website UMKM</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/form.js" defer></script>
+  <script src="js/app.js" defer></script>
+  
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
   <header class="site-header">
     <nav class="nav" aria-label="Navigasi utama">
-      <a class="brand" href="index.html">☕Kopi Kuripan</a>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a aria-current="page" href="kontak.html">Kontak</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-      </ul>
+        <a class="brand" href="index.html">☕Kopi Kuripan</a>
+
+        <details class="mobile-menu">
+          <summary aria-label="Buka menu navigasi">
+            <span class="hamburger" aria-hidden="true">☰</span>
+            <span>Menu</span>
+          </summary>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a aria-current="page" href="kontak.html">Kontak</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+          </ul>
+        </details>
+
+        <ul class="desktop-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a aria-current="page" href="kontak.html">Kontak</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
     </nav>
   </header>
 

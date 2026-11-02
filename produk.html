@@ -5,19 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Produk Kopi Kuripan - Website UMKM</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" defer></script>
+
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
   <header class="site-header">
     <nav class="nav" aria-label="Navigasi utama">
-      <a class="brand" href="index.html">☕Kopi Kuripan</a>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a aria-current="page" href="produk.html">Produk</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-      </ul>
+        <a class="brand" href="index.html">☕Kopi Kuripan</a>
+
+        <details class="mobile-menu">
+          <summary aria-label="Buka menu navigasi">
+            <span class="hamburger" aria-hidden="true">☰</span>
+            <span>Menu</span>
+          </summary>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a aria-current="page" href="produk.html">Produk</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+          </ul>
+        </details>
+
+        <ul class="desktop-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a aria-current="page" href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
     </nav>
   </header>
   
@@ -81,6 +98,15 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="produk-dinamis-title">
+      <div class="section-header">
+        <p class="eyebrow">Data JavaScript</p>
+          <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
+        <p id="produk-ringkasan">Data produk akan dimuat melalui JavaScript.</p>
+      </div>
+      <div id="produk-dinamis" class="js-product-grid"></div>
+    </section>
+
     <section aria-labelledby="harga-title">
       <h2 id="harga-title">Daftar Harga Lengkap</h2>
       <div class="table-scroll" role="region" aria-labelledby="harga-title" tabindex="0">
@@ -108,6 +134,11 @@
               <th scope="row">Kopi Espresso</th>
               <td>Shot</td>
               <td>Rp25.000</td>
+            </tr>
+            <tr>
+              <th scope="row">Kopi Cold Brew</th>
+              <td>Bottle 500 ml</td>
+              <td>Rp30.000</td>
             </tr>
           </tbody>
         </table>

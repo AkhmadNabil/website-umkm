@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kopi Kuripan - UMKM Pekalongan</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/app.js" defer></script>
+    
   </head>
   <body>
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
@@ -12,6 +15,12 @@
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
         <a class="brand" href="index.html">☕Kopi Kuripan</a>
+
+        <details class="mobile-menu">
+          <summary aria-label="Buka menu navigasi">
+            <span class="hamburger" aria-hidden="true">☰</span>
+            <span>Menu</span>
+          </summary>
           <ul>
             <li><a aria-current="page" href="index.html">Beranda</a></li>
             <li><a href="produk.html">Produk</a></li>
@@ -19,6 +28,15 @@
             <li><a href="kontak.html">Kontak</a></li>
             <li><a href="tentang.html">Tentang Kami</a></li>
           </ul>
+        </details>
+
+        <ul class="desktop-menu">
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -98,6 +116,5 @@
       <p>&copy; 2026 Kopi Kuripan. Data pada halaman ini bersifat dummy.</p>
     </footer>
 
-    <script src="js/script.js"></script>
   </body>
 </html>
