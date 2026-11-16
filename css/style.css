@@ -508,3 +508,58 @@ th, td { padding: 10px; text-align: left; border: 1px solid var(--color-border);
   font-weight: 700;
   color: var(--color-primary, #6f4e37);
 }
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem 1.5rem;
+}
+
+.filter-button {
+  border: 1px solid var(--color-border, #dccbbc);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-text, #2f2118);
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  border-color: var(--color-primary, #7b4b2a);
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  outline-offset: 2px;
+}
+
+.filter-button.is-active {
+  background: var(--color-primary, #7b4b2a);
+  border-color: var(--color-primary, #7b4b2a);
+  color: #ffffff;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  border: 1px dashed #94a3b8;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  color: #64748b;
+  text-align: center;
+}
+
+.product-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent, #ffd166);
+  border: none;
+  border-radius: var(--radius-sm, 8px);
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.product-content button:hover {
+  background-color: #e5b85a;
+}
